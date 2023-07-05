@@ -1,0 +1,489 @@
+<!--
+Inputs Names:
+	0) B01(t-1)
+	1) B02(t-1)
+	2) B03(t-1)
+	3) B04(t-1)
+	4) B07(t-1)
+	5) B09(t-1)
+	6) B10(t-1)
+	7) B13(t-1)
+	8) B14(t-1)
+	9) B15(t-1)
+	10) B01(t)
+	11) B03(t)
+	12) B04(t)
+	13) B05(t)
+	14) B06(t)
+	15) B07(t)
+	16) B14(t)
+-->
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<style>
+    /* Global styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+    }
+    
+    .form {
+        width: 70%;
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+    
+    .form td {
+        padding: 15px;
+        border: 1px solid #ddd;
+    }
+    
+    /* Form input styles */
+    .form input[type=range], 
+    .form input[type=number] {
+        width: 100%;
+    }
+    
+    /* Align number inputs to right */
+    .form input[type=number] {
+        text-align: right;
+    }
+    
+    /* Align center elements */
+    .form td:nth-child(2) {
+        text-align: center;
+    }
+    
+    /* Button styles */
+    .btn {
+        background-color: #4caf50;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+    }
+    
+    /* Add responsiveness */
+    @media (max-width: 768px) {
+        .form {
+            width: 100%;
+        }
+    }
+	
+	.hide-table {
+		display: none;
+	}
+
+    /* ...existing styles... */
+
+    .form td:nth-child(1) {
+        width: 50%; /* adjust as needed */
+    }
+
+    .form td:nth-child(2) {
+        width: 50%; /* adjust as needed */
+    }
+
+    /* ...existing styles... */
+</style>
+
+<body>
+    <div class="form-container">
+        <form class="form">
+            <!-- Place first group of inputs here -->
+        </form>
+        
+        <form class="form">
+            <!-- Place second group of inputs here -->
+        </form>
+        
+        <form class="form">
+            <!-- Place third group of inputs here -->
+        </form>
+    </div>
+</body>
+
+
+
+<body>
+
+
+<section>
+<br/>
+
+
+<div align="center" style="display:block;text-align: center;">
+<!-- MENU OPTIONS HERE  -->
+<form style="display: inline-block;margin-left: auto; margin-right: auto;">
+
+<p style="text-align:center"><strong>Simulator for Bus B03</strong></p>
+
+<hr />
+<p>In a time-series analysis of variables,&nbsp;&quot;B03&quot;, &quot;B03(t-1)&quot;, &quot;B03(t)&quot;, and &quot;B03(t+1)&quot;&nbsp;</p>
+
+<p>denote specific timeframes. &quot;B03(t-1)&quot;&nbsp;represents the value of &quot;B03&quot; one period&nbsp;</p>
+
+<p>in the past, &quot;B03(t)&quot; indicates its current&nbsp;value, and &quot;B03(t+1)&quot; forecasts its&nbsp;value</p>
+
+<p>one period into the future.</p>
+
+<table border="1px" class="form">
+
+<!-- 0scaling layer -->
+<tr style="height:3.5em">
+<td> B01(t-1) </td>
+<td style="text-align:center">
+<input type="range" id="B_zero__one__lag__one_" value="38.0767" min="5.77415" max="70.3792" step="0.646051" onchange="updateTextInput1(this.value, 'B_zero__one__lag__one__text')" />
+<input class="tabla" type="number" id="B_zero__one__lag__one__text" value="38.0767" min="5.77415" max="70.3792" step="0.646051" onchange="updateTextInput1(this.value, 'B_zero__one__lag__one_')">
+</td>
+</tr>
+
+
+<!-- 1scaling layer -->
+<tr style="height:3.5em">
+<td> B02(t-1) </td>
+<td style="text-align:center">
+<input type="range" id="B_zero__two__lag__one_" value="21.9675" min="2.401" max="41.534" step="0.39133" onchange="updateTextInput1(this.value, 'B_zero__two__lag__one__text')" />
+<input class="tabla" type="number" id="B_zero__two__lag__one__text" value="21.9675" min="2.401" max="41.534" step="0.39133" onchange="updateTextInput1(this.value, 'B_zero__two__lag__one_')">
+</td>
+</tr>
+
+
+<!-- 2scaling layer -->
+<tr style="height:3.5em">
+<td> B03(t-1)</td>
+<td style="text-align:center">
+<input type="range" id="B_zero__three__lag__one_" value="27.9" min="1.877" max="53.923" step="0.52046" onchange="updateTextInput1(this.value, 'B_zero__three__lag__one__text')" />
+<input class="tabla" type="number" id="B_zero__three__lag__one__text" value="27.9" min="1.877" max="53.923" step="0.52046" onchange="updateTextInput1(this.value, 'B_zero__three__lag__one_')">
+</td>
+</tr>
+
+
+<!-- 3scaling layer -->
+<tr style="height:3.5em">
+<td> B04(t-1) </td>
+<td style="text-align:center">
+<input type="range" id="B_zero__four__lag__one_" value="19.6" min="1.32" max="37.88" step="0.3656" onchange="updateTextInput1(this.value, 'B_zero__four__lag__one__text')" />
+<input class="tabla" type="number" id="B_zero__four__lag__one__text" value="19.6" min="1.32" max="37.88" step="0.3656" onchange="updateTextInput1(this.value, 'B_zero__four__lag__one_')">
+</td>
+</tr>
+
+
+<!-- 4scaling layer -->
+<tr style="height:3.5em">
+<td> B07(t-1)</td>
+<td style="text-align:center">
+<input type="range" id="B_zero__seven__lag__one_" value="26.565" min="1.456" max="51.674" step="0.50218" onchange="updateTextInput1(this.value, 'B_zero__seven__lag__one__text')" />
+<input class="tabla" type="number" id="B_zero__seven__lag__one__text" value="26.565" min="1.456" max="51.674" step="0.50218" onchange="updateTextInput1(this.value, 'B_zero__seven__lag__one_')">
+</td>
+</tr>
+
+
+<!-- 5scaling layer -->
+<tr style="height:3.5em">
+<td> B09(t-1) </td>
+<td style="text-align:center">
+<input type="range" id="B_zero__nine__lag__one_" value="9.0555" min="1.64" max="16.471" step="0.14831" onchange="updateTextInput1(this.value, 'B_zero__nine__lag__one__text')" />
+<input class="tabla" type="number" id="B_zero__nine__lag__one__text" value="9.0555" min="1.64" max="16.471" step="0.14831" onchange="updateTextInput1(this.value, 'B_zero__nine__lag__one_')">
+</td>
+</tr>
+
+
+<!-- 6scaling layer -->
+<tr style="height:3.5em">
+<td> B10(t-1)</td>
+<td style="text-align:center">
+<input type="range" id="B_one__zero__lag__one_" value="9.4785" min="0.689" max="18.268" step="0.17579" onchange="updateTextInput1(this.value, 'B_one__zero__lag__one__text')" />
+<input class="tabla" type="number" id="B_one__zero__lag__one__text" value="9.4785" min="0.689" max="18.268" step="0.17579" onchange="updateTextInput1(this.value, 'B_one__zero__lag__one_')">
+</td>
+</tr>
+
+
+<!-- 7scaling layer -->
+<tr style="height:3.5em">
+<td> B13(t-1) </td>
+<td style="text-align:center">
+<input type="range" id="B_one__three__lag__one_" value="3.7845" min="0.0590005" max="7.51" step="0.07451" onchange="updateTextInput1(this.value, 'B_one__three__lag__one__text')" />
+<input class="tabla" type="number" id="B_one__three__lag__one__text" value="3.7845" min="0.0590005" max="7.51" step="0.07451" onchange="updateTextInput1(this.value, 'B_one__three__lag__one_')">
+</td>
+</tr>
+
+
+<!-- 8scaling layer -->
+<tr style="height:3.5em">
+<td> B14(t-1) </td>
+<td style="text-align:center">
+<input type="range" id="B_one__four__lag__one_" value="9.4785" min="0.689" max="18.268" step="0.17579" onchange="updateTextInput1(this.value, 'B_one__four__lag__one__text')" />
+<input class="tabla" type="number" id="B_one__four__lag__one__text" value="9.4785" min="0.689" max="18.268" step="0.17579" onchange="updateTextInput1(this.value, 'B_one__four__lag__one_')">
+</td>
+</tr>
+
+
+<!-- 9scaling layer -->
+<tr style="height:3.5em">
+<td> B15(t-1) </td>
+<td style="text-align:center">
+<input type="range" id="B_one__five__lag__one_" value="9.0955" min="1.006" max="17.185" step="0.16179" onchange="updateTextInput1(this.value, 'B_one__five__lag__one__text')" />
+<input class="tabla" type="number" id="B_one__five__lag__one__text" value="9.0955" min="1.006" max="17.185" step="0.16179" onchange="updateTextInput1(this.value, 'B_one__five__lag__one_')">
+</td>
+</tr>
+
+</table>
+</form>
+
+<table border="1px" class="form hide-table">
+
+<!-- 10scaling layer -->
+<tr style="height:3.5em">
+<td> B01(t) </td>
+<td style="text-align:center">
+<input type="range" id="B_zero__one__lag__zero_" value="38.0767" min="5.77414" max="70.3792" step="0.646051" onchange="updateTextInput1(this.value, 'B_zero__one__lag__zero__text')" />
+<input class="tabla" type="number" id="B_zero__one__lag__zero__text" value="38.0767" min="5.77414" max="70.3792" step="0.646051" onchange="updateTextInput1(this.value, 'B_zero__one__lag__zero_')">
+</td>
+</tr>
+
+
+<!-- 11scaling layer -->
+<tr style="height:3.5em">
+<td> B03(t) </td>
+<td style="text-align:center">
+<input type="range" id="B_zero__three__lag__zero_" value="27.9" min="1.877" max="53.923" step="0.52046" onchange="updateTextInput1(this.value, 'B_zero__three__lag__zero__text')" />
+<input class="tabla" type="number" id="B_zero__three__lag__zero__text" value="27.9" min="1.877" max="53.923" step="0.52046" onchange="updateTextInput1(this.value, 'B_zero__three__lag__zero_')">
+</td>
+</tr>
+
+
+<!-- 12scaling layer -->
+<tr style="height:3.5em">
+<td> B04(t) </td>
+<td style="text-align:center">
+<input type="range" id="B_zero__four__lag__zero_" value="19.6" min="1.32" max="37.88" step="0.3656" onchange="updateTextInput1(this.value, 'B_zero__four__lag__zero__text')" />
+<input class="tabla" type="number" id="B_zero__four__lag__zero__text" value="19.6" min="1.32" max="37.88" step="0.3656" onchange="updateTextInput1(this.value, 'B_zero__four__lag__zero_')">
+</td>
+</tr>
+
+
+<!-- 13scaling layer -->
+<tr style="height:3.5em">
+<td> B05(t) </td>
+<td style="text-align:center">
+<input type="range" id="B_zero__five__lag__zero_" value="7.6695" min="0.839" max="14.5" step="0.13661" onchange="updateTextInput1(this.value, 'B_zero__five__lag__zero__text')" />
+<input class="tabla" type="number" id="B_zero__five__lag__zero__text" value="7.6695" min="0.839" max="14.5" step="0.13661" onchange="updateTextInput1(this.value, 'B_zero__five__lag__zero_')">
+</td>
+</tr>
+
+
+<!-- 14scaling layer -->
+<tr style="height:3.5em">
+<td> B06(t) </td>
+<td style="text-align:center">
+<input type="range" id="B_zero__six__lag__zero_" value="19.9639" min="2.467" max="37.4608" step="0.349938" onchange="updateTextInput1(this.value, 'B_zero__six__lag__zero__text')" />
+<input class="tabla" type="number" id="B_zero__six__lag__zero__text" value="19.9639" min="2.467" max="37.4608" step="0.349938" onchange="updateTextInput1(this.value, 'B_zero__six__lag__zero_')">
+</td>
+</tr>
+
+
+<!-- 15scaling layer -->
+<tr style="height:3.5em">
+<td> B07(t) </td>
+<td style="text-align:center">
+<input type="range" id="B_zero__seven__lag__zero_" value="26.565" min="1.456" max="51.674" step="0.50218" onchange="updateTextInput1(this.value, 'B_zero__seven__lag__zero__text')" />
+<input class="tabla" type="number" id="B_zero__seven__lag__zero__text" value="26.565" min="1.456" max="51.674" step="0.50218" onchange="updateTextInput1(this.value, 'B_zero__seven__lag__zero_')">
+</td>
+</tr>
+
+
+<!-- 16scaling layer -->
+<tr style="height:3.5em">
+<td> B14(t)</td>
+<td style="text-align:center">
+<input type="range" id="B_one__four__lag__zero_" value="9.4785" min="0.689" max="18.268" step="0.17579" onchange="updateTextInput1(this.value, 'B_one__four__lag__zero__text')" />
+<input class="tabla" type="number" id="B_one__four__lag__zero__text" value="9.4785" min="0.689" max="18.268" step="0.17579" onchange="updateTextInput1(this.value, 'B_one__four__lag__zero_')">
+</td>
+</tr>
+
+</table>
+</form>
+
+
+<div align="center">
+<!-- BUTTON HERE -->
+<br><button class="btn" onclick="neuralNetwork()"> Calculate </button></br>
+</div>
+
+
+<br/>
+
+
+<table border="1px" class="form">
+
+<tr style="height:3.5em">
+<td> B03(t+1) [kWh] </td>
+
+<td>
+<input style="text-align:right; padding-right:20px;" id="B_zero__three__ahead__one_" value="" type="text"  disabled/>
+</td>
+</tr>
+
+</table>
+
+<hr />
+<p>This simulation is designed to predict the future values of the system&#39;s most critical bus (B03), taking into account the influence of the only most impactful buses on B03.</p>
+
+<p>The impact of these buses on the critical bus is considered under two conditions: their value in a previous time period (t-1) and their steady-state value before the simulation.</p>
+
+<p>The term &#39;buses at the (t) timeframe&#39; refers to the current value of buses during the simulation, while the timeframe of (t+1) indicates a future or forecasted load value for a bus.</p>
+
+<p>Identifying critical buses through sensitivity analysis enables efficient resource allocation, facilitates the integration of renewable energy sources by managing variability, and</p>
+
+<p>maintains system stability by pinpointing potential vulnerabilities to voltage or frequency fluctuations.</p>
+
+<hr />
+<p>&nbsp;</p>
+
+</form>
+</div>
+<br>
+</section>
+
+
+<script>
+function neuralNetwork()
+{
+	var inputs = [];
+	var B_zero__one__lag__one_ = document.getElementById("B_zero__one__lag__one_").value; 
+	inputs.push(B_zero__one__lag__one_);
+	var B_zero__two__lag__one_ = document.getElementById("B_zero__two__lag__one_").value; 
+	inputs.push(B_zero__two__lag__one_);
+	var B_zero__three__lag__one_ = document.getElementById("B_zero__three__lag__one_").value; 
+	inputs.push(B_zero__three__lag__one_);
+	var B_zero__four__lag__one_ = document.getElementById("B_zero__four__lag__one_").value; 
+	inputs.push(B_zero__four__lag__one_);
+	var B_zero__seven__lag__one_ = document.getElementById("B_zero__seven__lag__one_").value; 
+	inputs.push(B_zero__seven__lag__one_);
+	var B_zero__nine__lag__one_ = document.getElementById("B_zero__nine__lag__one_").value; 
+	inputs.push(B_zero__nine__lag__one_);
+	var B_one__zero__lag__one_ = document.getElementById("B_one__zero__lag__one_").value; 
+	inputs.push(B_one__zero__lag__one_);
+	var B_one__three__lag__one_ = document.getElementById("B_one__three__lag__one_").value; 
+	inputs.push(B_one__three__lag__one_);
+	var B_one__four__lag__one_ = document.getElementById("B_one__four__lag__one_").value; 
+	inputs.push(B_one__four__lag__one_);
+	var B_one__five__lag__one_ = document.getElementById("B_one__five__lag__one_").value; 
+	inputs.push(B_one__five__lag__one_);
+	var B_zero__one__lag__zero_ = document.getElementById("B_zero__one__lag__zero_").value; 
+	inputs.push(B_zero__one__lag__zero_);
+	var B_zero__three__lag__zero_ = document.getElementById("B_zero__three__lag__zero_").value; 
+	inputs.push(B_zero__three__lag__zero_);
+	var B_zero__four__lag__zero_ = document.getElementById("B_zero__four__lag__zero_").value; 
+	inputs.push(B_zero__four__lag__zero_);
+	var B_zero__five__lag__zero_ = document.getElementById("B_zero__five__lag__zero_").value; 
+	inputs.push(B_zero__five__lag__zero_);
+	var B_zero__six__lag__zero_ = document.getElementById("B_zero__six__lag__zero_").value; 
+	inputs.push(B_zero__six__lag__zero_);
+	var B_zero__seven__lag__zero_ = document.getElementById("B_zero__seven__lag__zero_").value; 
+	inputs.push(B_zero__seven__lag__zero_);
+	var B_one__four__lag__zero_ = document.getElementById("B_one__four__lag__zero_").value; 
+	inputs.push(B_one__four__lag__zero_);
+
+	var outputs = calculate_outputs(inputs); 
+	var B_zero__three__ahead__one_ = document.getElementById("B_zero__three__ahead__one_");
+	B_zero__three__ahead__one_.value = outputs[0].toFixed(4);
+	update_LSTM();
+}
+
+function calculate_outputs(inputs)
+{
+	var B_zero__one__lag__one_ = +inputs[0];
+	var B_zero__two__lag__one_ = +inputs[1];
+	var B_zero__three__lag__one_ = +inputs[2];
+	var B_zero__four__lag__one_ = +inputs[3];
+	var B_zero__seven__lag__one_ = +inputs[4];
+	var B_zero__nine__lag__one_ = +inputs[5];
+	var B_one__zero__lag__one_ = +inputs[6];
+	var B_one__three__lag__one_ = +inputs[7];
+	var B_one__four__lag__one_ = +inputs[8];
+	var B_one__five__lag__one_ = +inputs[9];
+	var B_zero__one__lag__zero_ = +inputs[10];
+	var B_zero__three__lag__zero_ = +inputs[11];
+	var B_zero__four__lag__zero_ = +inputs[12];
+	var B_zero__five__lag__zero_ = +inputs[13];
+	var B_zero__six__lag__zero_ = +inputs[14];
+	var B_zero__seven__lag__zero_ = +inputs[15];
+	var B_one__four__lag__zero_ = +inputs[16];
+
+	var scaled_B_zero__one__lag__one_ = (B_zero__one__lag__one_-22.45429993)/14.29559994;
+	var scaled_B_zero__two__lag__one_ = (B_zero__two__lag__one_-11.32460022)/6.162340164;
+	var scaled_B_zero__three__lag__one_ = (B_zero__three__lag__one_-11.12279987)/10.59549999;
+	var scaled_B_zero__four__lag__one_ = (B_zero__four__lag__one_-7.273250103)/5.772819996;
+	var scaled_B_zero__seven__lag__one_ = (B_zero__seven__lag__one_-11.54990005)/7.168260098;
+	var scaled_B_zero__nine__lag__one_ = (B_zero__nine__lag__one_-5.108329773)/2.173360109;
+	var scaled_B_one__zero__lag__one_ = (B_one__zero__lag__one_-4.931990147)/3.149280071;
+	var scaled_B_one__three__lag__one_ = (B_one__three__lag__one_-1.179080009)/1.059020042;
+	var scaled_B_one__four__lag__one_ = (B_one__four__lag__one_-4.931990147)/3.149280071;
+	var scaled_B_one__five__lag__one_ = (B_one__five__lag__one_-4.645890236)/2.437419891;
+	var scaled_B_zero__one__lag__zero_ = (B_zero__one__lag__zero_-22.4545002)/14.2954998;
+	var scaled_B_zero__three__lag__zero_ = (B_zero__three__lag__zero_-11.12290001)/10.59539986;
+	var scaled_B_zero__four__lag__zero_ = (B_zero__four__lag__zero_-7.273519993)/5.772769928;
+	var scaled_B_zero__five__lag__zero_ = (B_zero__five__lag__zero_-3.522550106)/1.796010017;
+	var scaled_B_zero__six__lag__zero_ = (B_zero__six__lag__zero_-9.453920364)/4.694489956;
+	var scaled_B_zero__seven__lag__zero_ = (B_zero__seven__lag__zero_-11.55119991)/7.170289993;
+	var scaled_B_one__four__lag__zero_ = (B_one__four__lag__zero_-4.932109833)/3.149230003;
+
+	var perceptron_layer_1_output_0 = Math.tanh( -0.836329 + (scaled_B_zero__one__lag__one_*-0.877954) + (scaled_B_zero__two__lag__one_*0.0487552) + (scaled_B_zero__three__lag__one_*-0.11657) + (scaled_B_zero__four__lag__one_*-0.29047) + (scaled_B_zero__seven__lag__one_*0.532358) + (scaled_B_zero__nine__lag__one_*-0.0279229) + (scaled_B_one__zero__lag__one_*0.0113339) + (scaled_B_one__three__lag__one_*-0.0873212) + (scaled_B_one__four__lag__one_*-0.020795) + (scaled_B_one__five__lag__one_*-0.0545451) + (scaled_B_zero__one__lag__zero_*1.05491) + (scaled_B_zero__three__lag__zero_*-0.574742) + (scaled_B_zero__four__lag__zero_*0.17826) + (scaled_B_zero__five__lag__zero_*-0.0666091) + (scaled_B_zero__six__lag__zero_*0.0359176) + (scaled_B_zero__seven__lag__zero_*-0.544885) + (scaled_B_one__four__lag__zero_*0.0510416) );
+	var perceptron_layer_1_output_1 = Math.tanh( -0.00778378 + (scaled_B_zero__one__lag__one_*-0.0340111) + (scaled_B_zero__two__lag__one_*-0.0938105) + (scaled_B_zero__three__lag__one_*0.0162572) + (scaled_B_zero__four__lag__one_*0.153303) + (scaled_B_zero__seven__lag__one_*-0.21173) + (scaled_B_zero__nine__lag__one_*0.0518154) + (scaled_B_one__zero__lag__one_*0.256039) + (scaled_B_one__three__lag__one_*-0.231979) + (scaled_B_one__four__lag__one_*0.382915) + (scaled_B_one__five__lag__one_*-0.0295348) + (scaled_B_zero__one__lag__zero_*-0.117589) + (scaled_B_zero__three__lag__zero_*0.0303975) + (scaled_B_zero__four__lag__zero_*0.121025) + (scaled_B_zero__five__lag__zero_*-0.290104) + (scaled_B_zero__six__lag__zero_*-0.0643587) + (scaled_B_zero__seven__lag__zero_*-0.149069) + (scaled_B_one__four__lag__zero_*0.231435) );
+	var perceptron_layer_1_output_2 = Math.tanh( -0.159303 + (scaled_B_zero__one__lag__one_*0.250782) + (scaled_B_zero__two__lag__one_*0.0533585) + (scaled_B_zero__three__lag__one_*-0.404911) + (scaled_B_zero__four__lag__one_*-0.0137362) + (scaled_B_zero__seven__lag__one_*-0.0241337) + (scaled_B_zero__nine__lag__one_*-0.132951) + (scaled_B_one__zero__lag__one_*-0.31115) + (scaled_B_one__three__lag__one_*-0.0353421) + (scaled_B_one__four__lag__one_*-0.0704915) + (scaled_B_one__five__lag__one_*-0.169624) + (scaled_B_zero__one__lag__zero_*-0.236125) + (scaled_B_zero__three__lag__zero_*-0.499208) + (scaled_B_zero__four__lag__zero_*-0.33706) + (scaled_B_zero__five__lag__zero_*0.12201) + (scaled_B_zero__six__lag__zero_*0.276375) + (scaled_B_zero__seven__lag__zero_*-0.20182) + (scaled_B_one__four__lag__zero_*-0.313827) );
+	var perceptron_layer_1_output_3 = Math.tanh( -0.329541 + (scaled_B_zero__one__lag__one_*-0.345741) + (scaled_B_zero__two__lag__one_*-0.0304151) + (scaled_B_zero__three__lag__one_*-0.266843) + (scaled_B_zero__four__lag__one_*-0.355406) + (scaled_B_zero__seven__lag__one_*0.361582) + (scaled_B_zero__nine__lag__one_*-0.117641) + (scaled_B_one__zero__lag__one_*-0.0949368) + (scaled_B_one__three__lag__one_*-0.138654) + (scaled_B_one__four__lag__one_*0.0378266) + (scaled_B_one__five__lag__one_*0.0896488) + (scaled_B_zero__one__lag__zero_*0.219822) + (scaled_B_zero__three__lag__zero_*0.376041) + (scaled_B_zero__four__lag__zero_*0.146244) + (scaled_B_zero__five__lag__zero_*-0.0654003) + (scaled_B_zero__six__lag__zero_*0.181473) + (scaled_B_zero__seven__lag__zero_*-0.390341) + (scaled_B_one__four__lag__zero_*0.138168) );
+	var perceptron_layer_1_output_4 = Math.tanh( -1.23723 + (scaled_B_zero__one__lag__one_*-0.428285) + (scaled_B_zero__two__lag__one_*0.0178164) + (scaled_B_zero__three__lag__one_*0.0874569) + (scaled_B_zero__four__lag__one_*0.0148708) + (scaled_B_zero__seven__lag__one_*0.149157) + (scaled_B_zero__nine__lag__one_*0.0448071) + (scaled_B_one__zero__lag__one_*0.0253251) + (scaled_B_one__three__lag__one_*-0.0114918) + (scaled_B_one__four__lag__one_*-0.0583544) + (scaled_B_one__five__lag__one_*-0.177337) + (scaled_B_zero__one__lag__zero_*0.724404) + (scaled_B_zero__three__lag__zero_*0.243723) + (scaled_B_zero__four__lag__zero_*-0.011913) + (scaled_B_zero__five__lag__zero_*0.00018945) + (scaled_B_zero__six__lag__zero_*-0.0039456) + (scaled_B_zero__seven__lag__zero_*-0.170782) + (scaled_B_one__four__lag__zero_*0.0522501) );
+	var perceptron_layer_1_output_5 = Math.tanh( -0.575678 + (scaled_B_zero__one__lag__one_*0.298679) + (scaled_B_zero__two__lag__one_*0.0676817) + (scaled_B_zero__three__lag__one_*1.03162) + (scaled_B_zero__four__lag__one_*0.519083) + (scaled_B_zero__seven__lag__one_*-0.183197) + (scaled_B_zero__nine__lag__one_*0.0226249) + (scaled_B_one__zero__lag__one_*0.0766861) + (scaled_B_one__three__lag__one_*0.226197) + (scaled_B_one__four__lag__one_*0.0240125) + (scaled_B_one__five__lag__one_*-0.0228525) + (scaled_B_zero__one__lag__zero_*-0.393914) + (scaled_B_zero__three__lag__zero_*-0.751492) + (scaled_B_zero__four__lag__zero_*-0.411935) + (scaled_B_zero__five__lag__zero_*0.169047) + (scaled_B_zero__six__lag__zero_*-0.138546) + (scaled_B_zero__seven__lag__zero_*0.300117) + (scaled_B_one__four__lag__zero_*-0.114572) );
+	var perceptron_layer_1_output_6 = Math.tanh( 0.0927277 + (scaled_B_zero__one__lag__one_*0.21658) + (scaled_B_zero__two__lag__one_*0.273103) + (scaled_B_zero__three__lag__one_*0.547566) + (scaled_B_zero__four__lag__one_*0.496901) + (scaled_B_zero__seven__lag__one_*-0.327045) + (scaled_B_zero__nine__lag__one_*0.0245504) + (scaled_B_one__zero__lag__one_*-0.121222) + (scaled_B_one__three__lag__one_*0.104601) + (scaled_B_one__four__lag__one_*-0.34604) + (scaled_B_one__five__lag__one_*-0.131814) + (scaled_B_zero__one__lag__zero_*0.436813) + (scaled_B_zero__three__lag__zero_*-0.384257) + (scaled_B_zero__four__lag__zero_*0.0600678) + (scaled_B_zero__five__lag__zero_*0.0176843) + (scaled_B_zero__six__lag__zero_*0.355687) + (scaled_B_zero__seven__lag__zero_*0.207044) + (scaled_B_one__four__lag__zero_*-0.407645) );
+	var perceptron_layer_1_output_7 = Math.tanh( -0.0180513 + (scaled_B_zero__one__lag__one_*0.292155) + (scaled_B_zero__two__lag__one_*0.16318) + (scaled_B_zero__three__lag__one_*0.278038) + (scaled_B_zero__four__lag__one_*0.022052) + (scaled_B_zero__seven__lag__one_*-0.345177) + (scaled_B_zero__nine__lag__one_*0.164826) + (scaled_B_one__zero__lag__one_*0.14867) + (scaled_B_one__three__lag__one_*0.0515672) + (scaled_B_one__four__lag__one_*-0.193615) + (scaled_B_one__five__lag__one_*0.273073) + (scaled_B_zero__one__lag__zero_*-0.60794) + (scaled_B_zero__three__lag__zero_*0.0258861) + (scaled_B_zero__four__lag__zero_*0.0357643) + (scaled_B_zero__five__lag__zero_*0.031029) + (scaled_B_zero__six__lag__zero_*-0.197377) + (scaled_B_zero__seven__lag__zero_*0.530977) + (scaled_B_one__four__lag__zero_*-0.124664) );
+	var perceptron_layer_1_output_8 = Math.tanh( -0.15939 + (scaled_B_zero__one__lag__one_*0.876672) + (scaled_B_zero__two__lag__one_*0.0567988) + (scaled_B_zero__three__lag__one_*1.19832) + (scaled_B_zero__four__lag__one_*0.37355) + (scaled_B_zero__seven__lag__one_*-0.476143) + (scaled_B_zero__nine__lag__one_*0.00530156) + (scaled_B_one__zero__lag__one_*0.000231587) + (scaled_B_one__three__lag__one_*0.105471) + (scaled_B_one__four__lag__one_*0.0220329) + (scaled_B_one__five__lag__one_*0.192194) + (scaled_B_zero__one__lag__zero_*-1.35092) + (scaled_B_zero__three__lag__zero_*-1.25121) + (scaled_B_zero__four__lag__zero_*-0.415734) + (scaled_B_zero__five__lag__zero_*0.122967) + (scaled_B_zero__six__lag__zero_*-0.0676177) + (scaled_B_zero__seven__lag__zero_*0.517204) + (scaled_B_one__four__lag__zero_*-0.11398) );
+
+	var perceptron_layer_2_output_0 = ( 0.633054 + (perceptron_layer_1_output_0*-1.27467) + (perceptron_layer_1_output_1*0.237158) + (perceptron_layer_1_output_2*0.428441) + (perceptron_layer_1_output_3*0.985277) + (perceptron_layer_1_output_4*1.0942) + (perceptron_layer_1_output_5*0.762228) + (perceptron_layer_1_output_6*-0.136044) + (perceptron_layer_1_output_7*0.610617) + (perceptron_layer_1_output_8*-1.22981) );
+
+	var unscaling_layer_output_0=perceptron_layer_2_output_0*10.59539986+11.12290001;
+
+
+	var B_zero__three__ahead__one_ = unscaling_layer_output_0;
+	var out = [];
+	out.push(B_zero__three__ahead__one_);
+
+	return out;
+}
+
+function updateTextInput1(val, id)
+{
+	document.getElementById(id).value = val;
+}
+
+
+window.onresize = showDiv;
+
+
+</script>
+</body>
+</html>
+
+
+<!--
+
+Authors acknowledge Online HTML Editor, Neural Designer, Source Code Buetifier (hilite.me) user-friendly tools and applications for their significant 
+role in the model development. They appreciate the robust capabilities and user-friendly interface provided by these tools, which greatly facilitated 
+this research project.
+
+	. . .
